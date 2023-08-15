@@ -1,0 +1,260 @@
+html {
+    background-image: url("../Image/Background.jpg");
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: gray;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    position: relative;
+}
+
+section {
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 8%;
+}
+
+footer {
+    margin-top: 8%;
+}
+
+/* ↓ Font-Style ↓ */
+/*EN H1 Font*/
+@font-face {
+    font-family: "foxlite";
+    src: url(../Font/Foxlite.woff)  format("woff"),
+    url(../Font/Foxlite.ttf)  format("truetype");
+}
+
+/*EN Index Font*/
+@font-face {
+    font-family: "mufanpfs";
+    src: url(../Font/Mufanpfs.woff)  format("woff"),
+    url(../Font/Mufanpfs.ttf)  format("truetype");
+}
+
+/*JP Index Font*/
+@font-face {
+    font-family: "setofont";
+    src: url(../Font/SetoFont.woff)  format("woff"),
+    url(../Font/SetoFont.ttf)  format("truetype");
+}
+
+/*ZH-TW Index Font*/
+@font-face {
+    font-family: "naikai";
+    src: url(../Font/NaikaiFont.woff)  format("woff"),
+    url(../Font/NaikaiFont.ttf)  format("truetype");
+}
+
+/* Language Option Font*/
+@font-face {
+    font-family: "honmaru";
+    src: url(../Font/Honmaru.woff) format("woff"),
+    url(../Font/Honmaru.ttf)  format("truetype");
+}
+
+h1 {
+    font-family: foxlite;
+    font-size: 6vmin;
+    text-align: center;
+    color: black;
+}
+
+.chinese {
+    font-family: naikai;
+    font-size: 3.5vmin;
+    text-align: center;
+    line-height: 150%;
+    color: black;
+}
+
+.english {
+    font-family: mufanpfs;
+    font-size: 4vmin;
+    text-align: center;
+    color: black;
+}
+
+.japanese {
+    font-family: setofont;
+    font-size: 3.5vmin;
+    text-align: center;
+    color: black;
+}
+
+.language {
+    font-family: honmaru;
+    font-size: 3.5vmin;
+    text-align: center;
+    color: black;
+}
+
+/* ↑ Font-Style ↑ */
+
+/* ↓ Slider ↓ */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ↑ Slider ↑ */
+
+/* ↓ Loading Bar ↓ */
+.progress {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #F2F2F2;
+}
+
+.bar {
+    background-color: black;
+    width: 0%;
+    height: 8px;
+    border-radius: 3px;
+}
+
+.percent {
+    position: absolute;
+    display: inline-block;
+    top: 3px;
+    left: 48%;
+}
+
+/* ↑ Loading Bar ↑ */
+
+.illustrate {
+    text-align: center;
+    font-size: 1.5vmin;
+    margin-top: 1px;
+    color: black;
+}
+
+.part.flexbox {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.part.flexbox .left {
+    width: 50%;
+    margin: auto;
+}
+
+.part.flexbox .right {
+    width: 50%;
+    margin: auto;
+}
+
+.profile {
+    width: 35%;
+    height: 35%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    clip-path: circle(50%);
+}
+
+.contact {
+    width: 70%;
+    height: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+.contact img {
+    width: 40%;
+    height: 40%;
+}
+
+.con-icon {
+    display: table-cell;
+}
+
+.quote {
+    text-align: center;
+    font-size: 1.5vmin;
+    line-height: 150%;
+    margin-top: 50px;
+}
+
+/* ↓ Img Mask ↓ */
+.clip-trapezoid-us {
+    clip-path: polygon(0% 100%, 100% 100%, 85% 0%, 0% 0%);
+}
+
+.clip-trapezoid-ds {
+    clip-path: polygon(15% 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+/* ↑ Img Mask ↑ */
