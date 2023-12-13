@@ -55,3 +55,38 @@ function check_element(ele) {
 function set_ele(set_element) {
     check_element(set_element);
 }
+
+function change_language(language) {
+    // 獲取所有語言元素
+    var chineseElements = document.getElementsByClassName("chinese");
+    var englishElements = document.getElementsByClassName("english");
+    var japaneseElements = document.getElementsByClassName("japanese");
+
+    // 隱藏所有語言元素
+    Array.from(chineseElements).forEach(function (element) {
+        element.style.display = "none";
+    });
+
+    Array.from(englishElements).forEach(function (element) {
+        element.style.display = "none";
+    });
+
+    Array.from(japaneseElements).forEach(function (element) {
+        element.style.display = "none";
+    });
+
+    // 根據選擇的語言顯示相應元素
+    if (language === 'cn') {
+        Array.from(chineseElements).forEach(function (element) {
+            element.style.display = "block";
+        });
+    } else if (language === 'en') {
+        Array.from(englishElements).forEach(function (element) {
+            element.style.display = "block";
+        });
+    } else if (language === 'jp') {
+        Array.from(japaneseElements).forEach(function (element) {
+            element.style.display = "block";
+        });
+    }
+}

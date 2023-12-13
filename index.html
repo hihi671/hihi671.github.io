@@ -37,28 +37,50 @@
     <!--↑ Web Loading Progress Bar ↑-->
 
     <header>
-        <div data-aos="fade-down" data-aos-easing="linear" data-aos-delay="1500" data-aos-duration="2000">
-            <img src="./Image/Cover/Top.jpg" alt="Top.jpg">
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-delay="1000" data-aos-duration="1500">
+            <img src="./Image/Cover/Top.jpg" alt="Top.jpg" style="border-radius: 10px;">
             <p class="illustrate">※ Illustrate By Midjourney™</p>
         </div>
     </header>
 
-    <p class="language"><br>l&nbsp&nbsp&nbsp<a href="./index-jp.html"
-            title="日本語版">日本語</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp<a href="./index-en.html"
-            title="English Ver.">English</a>&nbsp&nbsp&nbspl</p>
+    <p class="language"><br>l&nbsp&nbsp&nbsp<a href="javascript:void(0)" onclick="change_language('cn')"
+            title="中文">中文</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp<a href="javascript:void(0)"
+            onclick="change_language('jp')" title="日本語">日本語</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp<a
+            href="javascript:void(0)" onclick="change_language('en')" title="English">English</a>&nbsp&nbsp&nbspl</p>
 
     <section class="part flexbox">
         <div class="left">
             <div data-aos="fade-right" data-aos-duration="1500">
                 <h1>About Me ¹</h1>
-                <p class="chinese">台嘎好，這裡是脆皮，有微社恐的宅宅
+                <p class="chinese" style="display: block;">台嘎好，這裡是牙膏，有微社恐的宅宅
                     <br>中文 OK || 英文 OK || 日語 N87
                     <br>很普通的普通人，興趣很廣但都不深
                     <br>交友就看投不投緣，合者聚不合者散
-                    <br>想聊天認識右邊有IG和TG可以直接加
+                    <br>想聊天認識右邊有 FB 和 TG 可以直接加
                     <br>但先打個預防針，本人講話比較直接
                     <br>歡迎繼續往下瀏覽了解更多的我
-                    <br>或是右上有個酷叉叉直接點下去
+                    <br>或是右上有個酷叉叉可以直接點下去
+                </p>
+                <p class="japanese" style="display: none;">ブラッドと申します。軽度コミュ障のおたく。
+                    <br>中国語 OK | 英語 OK | 日本語ちょっとだけ
+                    <br>ごく普通の人、興味は広いが深くない。
+                    <br>友情？なるがままに、無理はできない。
+                    <br>私の連絡先は右側にあります。
+                    <br>よかったら交換できる。でも正直言って私は
+                    <br>非常に直接的な話し方をする。わざとじゃない。
+                    <br>私についてもっと知るために読んでください。
+                    <br>または、右上の「X」をクリックしてください。
+                </p>
+                <p class="english" style="display: none;">Hi, here is Brad. A homebody has little <span
+                        title="Social Anxiety Disorder">SAD</span>.
+                    <br>Chinese OK | English OK | Japanese pretty limited
+                    <br>Just a normal man, interest is wide but not deep.
+                    <br>Friendship? Let it be. You can’t force it.
+                    <br>My contact information is on the right side.
+                    <br>You can add it directly. But let me speak frankly,
+                    <br>I'm a straightforward guy. I didn’t mean it.
+                    <br>Continue to scroll down if you want to know more.
+                    <br>Or there's a cool "X" at the upper right corner can click it.
                 </p>
             </div>
         </div>
@@ -67,15 +89,15 @@
                 <img class="profile" src="./Image/Icon/Profile.jpg" alt="Profile.jpg">
                 <div class="contact">
                     <div class="con-icon">
-                        <a href="javascript:void(0)" onclick="javascript:alert('很抱歉，因 IG 帳號遭盜用故暫時移除連結')"
-                            title="My Instagram (≧∀≦)ゞ">
-                            <alert><img src="./Image/Icon/Instagram.png" alt="Instagram.png" />
+                        <a href="https://www.facebook.com/boliderian" target="_blank" title="My Facebook (≧∀≦)ゞ">
+                            <img src="./Image/Icon/Facebook.png" alt="Facebook.png" />
                         </a>
                     </div>
-                    <div class="con-icon"><a href="https://t.me/nothing_brad" target="_blank"
-                            title="My Telegram (≧∀≦)ゞ"><img src="./Image/Icon/Telegram.png" alt="Telegram.png" /></a>
+                    <div class="con-icon">
+                        <a href="https://t.me/nothing_brad" target="_blank" title="My Telegram (≧∀≦)ゞ">
+                            <img src="./Image/Icon/Telegram.png" alt="Telegram.png" />
+                        </a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -87,7 +109,6 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="./Image/Body/Badminton.jpg" alt="Badminton.jpg"></div>
-                        <div class="swiper-slide"><img src="./Image/Body/Jogging.jpg" alt="Jogging.jpg"></div>
                         <div class="swiper-slide"><img src="./Image/Body/Work Out.jpg" alt="Work Out.jpg"></div>
                         <div class="swiper-slide"><img src="./Image/Body/Swimming.jpg" alt="Swimming.jpg"></div>
                         <div class="swiper-slide"><img src="./Image/Body/Piano.jpg" alt="Piano.jpg"></div>
@@ -101,12 +122,24 @@
         <div class="right">
             <div data-aos="fade-down" data-aos-duration="1500">
                 <h1>Spare Time ²</h1>
-                <p class="chinese">平時運動會打羽球、慢跑、健身和游泳
+                <p class="chinese" style="display: block;">平時運動喜歡打羽球、健身和游泳
                     <br>只要不運動就會渾身不對勁的怪人
                     <br>有學過一點鋼琴，但只會在心情差的時候彈
                     <br>
-                    <br>有玩遊戲、看動畫，但不會看實況
-                    <br>最近開始入華生坑，順便練英聽(?
+                    <br>有玩遊戲、看動畫，但沒看任何 V
+                </p>
+                <p class="japanese" style="display: none;">バドミントン、筋トレ、水泳が好き。
+                    <br>運動しないと変な感じがする人。
+                    <br>ピアノも弾けますが、あまり上手ではない。
+                    <br>それに、悲しいことがあったときだけやるんだ。
+                    <br>
+                    <br>ゲーム、アニメ、Vtuber は見ない。
+                </p>
+                <p class="english" style="display: none;">I like playing badminton, jogging, working out and swimming.
+                    <br>As long as I don't exercise, I will feel strange and weird.
+                    <br>I play the piano, but not very well. And I only do it when I'm upset.
+                    <br>
+                    <br>Gaming, Anime, but I don't watch any Vtuber.
                 </p>
             </div>
         </div>
@@ -116,10 +149,17 @@
         <div class="left">
             <div data-aos="fade-down-right" data-aos-duration="1500">
                 <h1>Games ³</h1>
-                <p class="chinese">遊戲的部分，其實坑滿多的，比較常玩
-                    <br>Apex、R6、WarThunder 和 Minecraft，偶爾玩
-                    <br>Company of Heroes 2、Battlefield 跟 Osu!
-                    <br>手遊的話有玩碧藍航線、闇影詩章和原神
+                <p class="chinese" style="display: block;">遊戲的部分，其實坑滿多的，比較常玩
+                    <br>Apex、R6、WarThunder 和 Minecraft
+                    <br>手遊有玩碧藍航線、原神和星穹鐵道
+                </p>
+                <p class="japanese" style="display: none;">ゲームの部分で、最近よくプレイしているゲームは
+                    <br>Apex、R6、WarThunder と Minecraft。
+                    <br>ソシャゲ：アズールレーン、原神、スターレイル。
+                </p>
+                <p class="english" style="display: none;">Talk to games. I play lots of games, like
+                    <br>Apex、R6、WarThunder and Minecraft.
+                    <br>Moblie game Azur Lane, Genshin Impact and Star Rails.
                 </p>
             </div>
         </div>
@@ -139,12 +179,27 @@
         <div class="right">
             <div data-aos="fade-down-right" data-aos-duration="1500">
                 <h1>Anime ⁴</h1>
-                <p class="chinese">動畫基本上各季新番討論度不錯的都會看
+                <p class="chinese" style="display: block;">動畫基本上各季新番討論度不錯的都會看
                     <br>特別是療育番跟搞笑番一定會看
                     <br>社畜需要多點治癒正能量緩解職場上的殘酷
                     <br>
-                    <br>有在追聲優坑，主推是邦邦的　工藤晴香
-                    <br>也很推她飾演遊戲裡的兩姊妹，互動超甜
+                    <br>聲優主推工藤晴香
+                    <br>歌手主推 milet
+                </p>
+                <p class="japanese" style="display: none;">基本的に、話題性のあるアニメはよく見る。
+                    <br>特に感動的なと面白いアニメは必ず見ます。
+                    <br>職場の残酷さを和らげるために、
+                    <br>ポジティブなエネルギーが必要だからです。
+                    <br>
+                    <br>好きな声優、工藤晴香。
+                    <br>好きな歌手、milet。
+                </p>
+                <p class="english" style="display: none;">Basically, I watch every anime has a good discussion.
+                    <br>Especially touching or funny anime. I'll' definitely watch it.
+                    <br>Cause I need some positive energy to ease the cruelty of workplace.
+                    <br>
+                    <br>Favorite voice actress, Kudou Haruka.
+                    <br>Favorite singer, milet.
                 </p>
             </div>
         </div>
@@ -154,13 +209,31 @@
         <div class="left">
             <div data-aos="fade-up" data-aos-duration="1500">
                 <h1>Others ⁵</h1>
-                <p class="chinese">資管系畢業，有稍微接觸一些硬體的知識
-                    <br>至少電腦裝修不求人，也喜歡研究資訊界的新知
+                <p class="chinese" style="display: block;">資管系畢業，現在是個社畜軟體工程師
+                    <br>喜歡研究電腦硬體，也喜歡研究資訊界的新知
                     <br>不過啊都沒有到很精通就是了，畢竟嘛
                     <br>資管系的特點就是什麼都學什麼都不精通
                     <br>
-                    <br>喜歡下廚料理填飽自己，也有在玩攝影
+                    <br>偶爾下廚料理填飽自己，也有在玩攝影
                     <br>但只是用手機隨手拍的，連業餘都稱不上
+                </p>
+                <p class="japanese" style="display: none;">情報管理学科卒業、現在はソフト開発者です。
+                    <br>PC の新しい科学技術情報を勉強するのが好き。
+                    <br>でも、あまり上手ではない。結局、情報管理学科
+                    <br>の特徴は何でも学ぶが、何も得意ではない。
+                    <br>
+                    <br>料理が好きで、写真も好きです。
+                    <br>アマチュアでもないのに、
+                    <br>スマホで写真を撮っているだけ。
+                </p>
+                <p class="english" style="display: none;">Graduated from the Department of Information Management.
+                    <br>Now working as a software engineer.
+                    <br>Like study hardware and new sci. & tech. info. about computer.
+                    <br>But not very proficient is it, After all...The characteristic
+                    <br>of IM is they learn everything and unproficient in everything.
+                    <br>
+                    <br>Sometimes cooking, and also like photography.
+                    <br>But just a cellphone camera lover, not even an amateur.
                 </p>
             </div>
         </div>
