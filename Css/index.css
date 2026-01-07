@@ -1,14 +1,18 @@
 html {
     background-image: url("../Image/Background.jpg");
-    background-size: 100%;
-    background-repeat: repeat-y;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
 }
 
 body {
     position: relative;
     height: 100%;
-    width: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 img {
@@ -37,7 +41,16 @@ a:active {
 }
 
 header {
-    position: relative;
+    padding: 20px 1%; 
+    box-sizing: border-box; 
+    width: 100%;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
 
 section {
@@ -52,40 +65,111 @@ footer {
     margin-top: 8%;
 }
 
-/* ↓ Font-Style ↓ */
-/*EN H1 Font*/
+/* Font-Style */
+/* EN H1 Font */
 @font-face {
     font-family: "foxlite";
     src: url(../Font/Foxlite.woff)  format("woff"),
     url(../Font/Foxlite.ttf)  format("truetype");
 }
 
-/*EN Index Font*/
+/* EN Index Font */
 @font-face {
     font-family: "mufanpfs";
     src: url(../Font/Mufanpfs.woff)  format("woff"),
     url(../Font/Mufanpfs.ttf)  format("truetype");
 }
 
-/*JP Index Font*/
+/* JP Index Font */
 @font-face {
     font-family: "setofont";
     src: url(../Font/SetoFont.woff)  format("woff"),
     url(../Font/SetoFont.ttf)  format("truetype");
 }
 
-/*ZH-TW Index Font*/
+/* ZH-TW Index Font */
 @font-face {
     font-family: "naikai";
     src: url(../Font/NaikaiFont.woff)  format("woff"),
     url(../Font/NaikaiFont.ttf)  format("truetype");
 }
 
-/* Language Option Font*/
+/* Language Option Font */
 @font-face {
     font-family: "honmaru";
     src: url(../Font/Honmaru.woff) format("woff"),
     url(../Font/Honmaru.ttf)  format("truetype");
+}
+
+/* PC Display */
+@media screen and (min-width: 769px) {
+    .clip-trapezoid-us {
+        clip-path: polygon(0% 100%, 100% 100%, 85% 0%, 0% 0%);
+    }
+
+    .clip-trapezoid-ds {
+        clip-path: polygon(15% 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+}
+
+/* Mobile Display */
+@media screen and (max-width: 768px) {
+    .clip-trapezoid-us,
+    .clip-trapezoid-ds {
+        clip-path: none !important;
+        -webkit-clip-path: none !important;
+    }
+
+    section {
+        margin-top: 10% !important; 
+        margin-bottom: 5% !important;
+        height: auto !important;
+    }
+
+    header {
+        padding: 10px 1% !important;
+        box-sizing: border-box;
+    }
+
+    header img {
+        border-radius: 5px;
+    }
+
+    .part.flexbox {
+        flex-direction: column;
+        height: auto !important;
+    }
+
+    .part.flexbox .left, 
+    .part.flexbox .right {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+        display: block !important;
+    }
+
+    .swiper {
+        height: 250px !important;
+    }
+
+    .profile {
+        width: 60% !important;
+        height: auto !important;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 8vmin !important;
+        margin-top: 10px !important;
+    }
+
+    .chinese, .english, .japanese {
+        font-size: 4.5vmin !important;
+        line-height: 1.4 !important;
+        padding: 0 15px;
+    }
 }
 
 h1 {
@@ -124,9 +208,9 @@ h1 {
     color: black;
 }
 
-/* ↑ Font-Style ↑ */
+/* Font-Style */
 
-/* ↓ Slider ↓ */
+/* Slider */
 .swiper {
     width: 100%;
     height: 100%;
@@ -157,9 +241,9 @@ h1 {
     object-fit: cover;
 }
 
-/* ↑ Slider ↑ */
+/* Slider */
 
-/* ↓ Loading Bar ↓ */
+/* Loading Bar */
 .progress {
     position: fixed;
     left: 0px;
@@ -175,6 +259,7 @@ h1 {
     width: 0%;
     height: 8px;
     border-radius: 3px;
+    transition: width 0.3s ease-out;
 }
 
 .percent {
@@ -184,7 +269,7 @@ h1 {
     left: 48%;
 }
 
-/* ↑ Loading Bar ↑ */
+/* Loading Bar */
 
 .illustrate {
     text-align: center;
@@ -248,14 +333,3 @@ h1 {
     line-height: 150%;
     margin-top: 50px;
 }
-
-/* ↓ Img Mask ↓ */
-.clip-trapezoid-us {
-    clip-path: polygon(0% 100%, 100% 100%, 85% 0%, 0% 0%);
-}
-
-.clip-trapezoid-ds {
-    clip-path: polygon(15% 100%, 100% 100%, 100% 0%, 0% 0%);
-}
-
-/* ↑ Img Mask ↑ */

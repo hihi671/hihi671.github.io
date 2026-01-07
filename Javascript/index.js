@@ -1,8 +1,8 @@
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
 $(function () {
-    AOS.init({
-        easing: 'ease-out-back',
-        duration: 1000
-    });
     const swiper = new Swiper(".mySwiper", {
         direction: "horizontal",
         effect: "fade",
@@ -21,48 +21,53 @@ $(function () {
             hideOnClick: true,
         },
     });
+    initLoadingBar();
 })
 
-document.onreadystatechange = function (e) {
-    if (document.readyState == "interactive") {
-        var all = document.getElementsByTagName("*");
-        for (var i = 0, max = all.length; i < max; i++) {
-            set_ele(all[i]);
+function initLoadingBar() {
+    const $bar = $("#bar1");
+    const $progressDiv = $(".progress");
+    const imgs = document.querySelectorAll('img');
+    const total = imgs.length + 1;
+    let loaded = 0;
+
+    function increment() {
+        loaded++;
+        let width = Math.round((loaded / total) * 100);
+        $bar.stop().animate({ width: width + "%" }, 200);
+
+        if (loaded >= total) {
+            setTimeout(() => {
+                $progressDiv.fadeOut("slow", function() {
+                    AOS.init({
+                        easing: 'ease-out-back',
+                        duration: 1000,
+                    });
+                });
+            }, 500);
         }
     }
-}
 
-function check_element(ele) {
-    var all = document.getElementsByTagName("*");
-    var totalele = all.length;
-    var per_inc = 100 / all.length;
-
-    if ($(ele).on()) {
-        var prog_width = per_inc + Number(document.getElementById("progress_width").value);
-        document.getElementById("progress_width").value = prog_width;
-        $("#bar1").animate({
-            width: prog_width + "%"
-        }, 3, function () {
-            if (document.getElementById("bar1").style.width == "100%") {
-                $(".progress").fadeOut("slow");
+    if (imgs.length === 0) {
+        increment();
+    } else {
+        imgs.forEach(img => {
+            if (img.complete) {
+                increment();
+            } else {
+                $(img).on('load error', increment);
             }
         });
-    } else {
-        set_ele(ele);
     }
-}
-
-function set_ele(set_element) {
-    check_element(set_element);
+    
+    increment(); 
 }
 
 function change_language(language) {
-    // 獲取所有語言元素
     var chineseElements = document.getElementsByClassName("chinese");
     var englishElements = document.getElementsByClassName("english");
     var japaneseElements = document.getElementsByClassName("japanese");
 
-    // 隱藏所有語言元素
     Array.from(chineseElements).forEach(function (element) {
         element.style.display = "none";
     });
@@ -75,7 +80,6 @@ function change_language(language) {
         element.style.display = "none";
     });
 
-    // 根據選擇的語言顯示相應元素
     if (language === 'cn') {
         Array.from(chineseElements).forEach(function (element) {
             element.style.display = "block";
