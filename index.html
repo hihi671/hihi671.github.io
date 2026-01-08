@@ -36,6 +36,8 @@
     </div>
     <!--Web Loading Progress Bar-->
 
+    <div class="background-fixed"></div>
+
     <header>
         <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
             <img src="./Image/Cover/Top.jpg" alt="Top.jpg" style="border-radius: 10px;">
@@ -43,10 +45,10 @@
         </div>
     </header>
 
-    <p class="language"><br>l&nbsp&nbsp&nbsp<a href="javascript:void(0)" onclick="change_language('cn')"
+    <p class="language"><br>l&nbsp&nbsp&nbsp<a href="javascript:void(0)" onclick="changeLanguage('cn')"
             title="中文">中文</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp<a href="javascript:void(0)"
-            onclick="change_language('jp')" title="日本語">日本語</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp<a
-            href="javascript:void(0)" onclick="change_language('en')" title="English">English</a>&nbsp&nbsp&nbspl</p>
+            onclick="changeLanguage('jp')" title="日本語">日本語</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp<a
+            href="javascript:void(0)" onclick="changeLanguage('en')" title="English">English</a>&nbsp&nbsp&nbspl</p>
 
     <section class="part flexbox">
         <div class="left">
@@ -86,16 +88,16 @@
         </div>
         <div class="right">
             <div data-aos="fade-left" data-aos-duration="1500">
-                <img class="profile" src="./Image/Icon/Profile.jpg" alt="Profile.jpg">
+                <img class="profile" src="./Image/Icon/Profile.jpg" alt="Profile.jpg" loading="lazy">
                 <div class="contact">
                     <div class="con-icon">
                         <a href="https://www.facebook.com/boliderian" target="_blank" title="My Facebook (≧∀≦)ゞ">
-                            <img src="./Image/Icon/Facebook.png" alt="Facebook.png" />
+                            <img src="./Image/Icon/Facebook.png" alt="Facebook.png" loading="lazy" />
                         </a>
                     </div>
                     <div class="con-icon">
                         <a href="https://t.me/nothing_brad" target="_blank" title="My Telegram (≧∀≦)ゞ">
-                            <img src="./Image/Icon/Telegram.png" alt="Telegram.png" />
+                            <img src="./Image/Icon/Telegram.png" alt="Telegram.png" loading="lazy" />
                         </a>
                     </div>
                 </div>
@@ -108,10 +110,22 @@
             <div data-aos="fade-down" data-aos-duration="1500">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./Image/Body/Badminton.jpg" alt="Badminton.jpg"></div>
-                        <div class="swiper-slide"><img src="./Image/Body/Work Out.jpg" alt="Work Out.jpg"></div>
-                        <div class="swiper-slide"><img src="./Image/Body/Swimming.jpg" alt="Swimming.jpg"></div>
-                        <div class="swiper-slide"><img src="./Image/Body/Piano.jpg" alt="Piano.jpg"></div>
+                        <div class="swiper-slide">
+                            <img data-src="./Image/Body/Badminton.jpg" alt="Badminton.jpg" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img data-src="./Image/Body/Work Out.jpg" alt="Work Out.jpg" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img data-src="./Image/Body/Swimming.jpg" alt="Swimming.jpg" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img data-src="./Image/Body/Piano.jpg" alt="Piano.jpg" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
@@ -165,7 +179,7 @@
         </div>
         <div class="right">
             <div data-aos="fade-up-left" data-aos-duration="1500">
-                <img class="clip-trapezoid-ds" src="./Image/Body/Games.jpg" alt="Games.jpg">
+                <img class="clip-trapezoid-ds" src="./Image/Body/Games.jpg" alt="Games.jpg" loading="lazy">
             </div>
         </div>
     </section>
@@ -173,7 +187,7 @@
     <section class="part flexbox">
         <div class="left">
             <div data-aos="fade-up-left" data-aos-duration="1500">
-                <img class="clip-trapezoid-us" src="./Image/Body/Anime.jpg" alt="Anime.jpg">
+                <img class="clip-trapezoid-us" src="./Image/Body/Anime.jpg" alt="Anime.jpg" loading="lazy">
             </div>
         </div>
         <div class="right">
@@ -241,9 +255,18 @@
             <div data-aos="fade-up" data-aos-duration="1500">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./Image/Body/Construction.jpg" alt="Construction.jpg"></div>
-                        <div class="swiper-slide"><img src="./Image/Body/Cooking.jpg" alt="Cooking.jpg"></div>
-                        <div class="swiper-slide"><img src="./Image/Body/Photographic.jpg" alt="Photographic.jpg"></div>
+                        <div class="swiper-slide">
+                            <img data-src="./Image/Body/Construction.jpg" alt="Construction.jpg" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img data-src="./Image/Body/Cooking.jpg" alt="Cooking.jpg" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img data-src="./Image/Body/Photographic.jpg" alt="Photographic.jpg" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
@@ -257,6 +280,14 @@
         <p>This website using jQuery, AOS Library, and Swiper.
             <br>Created by Brad All Rights Reserved.
         </p>
+    </div>
+
+    <div id="back-to-top" onclick="scrollToTop()" title="回到頂部">
+        <span>↑</span>
+    </div>
+
+    <div id="dark-mode-fab" onclick="toggleDarkMode()" title="切換深淺模式">
+        <span id="mode-icon">🌓</span>
     </div>
 
     <input type="hidden" id="progress_width" value="0">
