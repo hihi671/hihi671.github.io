@@ -109,7 +109,7 @@ footer {
 
 /* Mobile Display */
 @media screen and (max-width: 768px) {
-    #dark-mode-fab {
+    #darkMode {
         right: 20px !important;
         bottom: 20px !important;
         width: 48px;
@@ -117,7 +117,7 @@ footer {
         font-size: 22px;
     }
 
-    #back-to-top {
+    #backToTop {
         right: 20px !important;
         bottom: 80px !important; 
         width: 48px;
@@ -335,7 +335,7 @@ h1 {
 }
 /* Loading Bar */
 
-.background-fixed {
+.backgroundFixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -415,7 +415,7 @@ h1 {
 }
 
 /* To Top Button */
-#back-to-top {
+#backToTop {
     position: fixed;
     right: 30px;
     bottom: 100px;
@@ -436,20 +436,20 @@ h1 {
     transform: translateY(20px);
 }
 
-#back-to-top.show {
+#backToTop.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-#back-to-top:hover {
+#backToTop:hover {
     background-color: var(--text-color);
     color: var(--fab-bg);
 }
 /* To Top Button */
 
 /* Dark Mode Button */
-#dark-mode-fab {
+#darkMode {
     position: fixed;
     right: 30px;
     bottom: 30px;
@@ -468,25 +468,7 @@ h1 {
     user-select: none;
 }
 
-#dark-mode-fab:hover {
+#darkMode:hover {
     transform: scale(1.1) rotate(10deg);
 }
 /* Dark Mode Button */
-
-@media screen and (max-width: 768px) {
-    #dark-mode-fab {
-        right: 20px !important;
-        bottom: 20px !important;
-        width: 48px;
-        height: 48px;
-        font-size: 22px;
-    }
-
-    #back-to-top {
-        right: 20px !important;
-        bottom: 80px !important; 
-        width: 48px;
-        height: 48px;
-        font-size: 20px;
-    }
-}

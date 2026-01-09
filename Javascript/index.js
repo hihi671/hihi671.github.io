@@ -5,9 +5,13 @@ window.onbeforeunload = function () {
 };
 
 $(function () {
-    const browserLang = navigator.language || navigator.userLanguage; 
+    const savedLang = localStorage.getItem('language');
+    const browserLang = navigator.language || navigator.userLanguage;
     const shortLang = browserLang.toLowerCase();
-    if (shortLang.includes('ja')) {
+
+    if (savedLang) {
+        currentLang = savedLang;
+    } else if (shortLang.includes('ja')) {
         currentLang = 'jp';
     } else if (shortLang.includes('en')) {
         currentLang = 'en';
@@ -16,23 +20,24 @@ $(function () {
     }
 
     changeLanguage(currentLang);
-    updateFabTitle();
+    updateButtonTitle();
 
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        $('#mode-icon').text('☀️');
+        $('#modeIcon').text('☀️');
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
-        $('#mode-icon').text('🌓');
+        $('#modeIcon').text('🌓');
     }
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
         if (!localStorage.getItem('theme')) {
             const newTheme = event.matches ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', newTheme);
-            $('#mode-icon').text(event.matches ? '☀️' : '🌓');
+            $('#modeIcon').text(event.matches ? '☀️' : '🌓');
             setTimeout(() => { AOS.refresh(); }, 100);
         }
     });
@@ -52,15 +57,15 @@ $(function () {
 
     $(window).scroll(function() {
         if ($(this).scrollTop() > 300) {
-            $('#back-to-top').addClass('show');
+            $('#backToTop').addClass('show');
         } else {
-            $('#back-to-top').removeClass('show');
+            $('#backToTop').removeClass('show');
         }
     });
 });
 
 function initLoadingBar() {
-    const $bar = $("#bar1");
+    const $bar = $("#bar");
     const $progressDiv = $(".progress");
     
     const imgs = document.querySelectorAll('img[src]:not([loading="lazy"])'); 
@@ -95,6 +100,8 @@ function initLoadingBar() {
 function changeLanguage(language) {
     currentLang = language;
     
+    localStorage.setItem('language', language); 
+
     const langs = ['chinese', 'english', 'japanese'];
     langs.forEach(l => {
         $(`.${l}`).hide();
@@ -103,20 +110,27 @@ function changeLanguage(language) {
     const langMap = { 'cn': '.chinese', 'en': '.english', 'jp': '.japanese' };
     $(langMap[language]).show();
 
-    updateFabTitle();
+    updateButtonTitle();
     
     setTimeout(() => { AOS.refresh(); }, 100);
 }
 
-function updateFabTitle() {
-    const fab = $('#dark-mode-fab');
-    const topBtn = $('#back-to-top');
+function updateButtonTitle() {
+    const fab = $('#darkMode');
+    const topBtn = $('#backToTop');
     
     const modeTitles = { 'cn': '切換深淺模式', 'jp': 'ダークモード切替', 'en': 'Toggle Dark Mode' };
     const topTitles = { 'cn': '回到頂部', 'jp': 'トップに戻る', 'en': 'Back to Top' };
     
     fab.attr('title', modeTitles[currentLang] || modeTitles['cn']);
     topBtn.attr('title', topTitles[currentLang] || topTitles['cn']);
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
 function toggleDarkMode() {
@@ -126,19 +140,12 @@ function toggleDarkMode() {
     if (currentTheme === 'dark') {
         html.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        $('#mode-icon').text('🌓');
+        $('#modeIcon').text('🌓');
     } else {
         html.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        $('#mode-icon').text('☀️');
+        $('#modeIcon').text('☀️');
     }
 
     setTimeout(() => { AOS.refresh(); }, 100);
-}
-
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
 }

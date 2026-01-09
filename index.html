@@ -2,7 +2,6 @@
 <html>
 
 <head>
-
     <meta charset="utf-8">
     <title>who am I | I am who (・ω・)</title>
     <link rel="icon" href="./Image/Icon/Web Icon.ico" type="image/x-icon">
@@ -24,19 +23,15 @@
     <script src="./Javascript/Swiper-Bundle.min.js" type="text/javascript"></script>
     <script>window.jQuery || document.write('<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"><\/script>')</script>
     <link rel="stylesheet" type="text/css" href="./Css/Swiper-Bundle.min.css">
-
 </head>
 
 <body>
-
-    <!--Web Loading Progress Bar-->
-    <div class='progress' id="progress_div">
-        <div class='bar' id='bar1'></div>
-        <div class='percent' id='percent1'></div>
+    <div class='progress' id="progressDiv">
+        <div class='bar' id='bar'></div>
+        <div class='percent' id='percent'></div>
     </div>
-    <!--Web Loading Progress Bar-->
 
-    <div class="background-fixed"></div>
+    <div class="backgroundFixed"></div>
 
     <header>
         <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
@@ -45,23 +40,25 @@
         </div>
     </header>
 
-    <p class="language"><br>l&nbsp&nbsp&nbsp<a href="javascript:void(0)" onclick="changeLanguage('cn')"
-            title="中文">中文</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp<a href="javascript:void(0)"
-            onclick="changeLanguage('jp')" title="日本語">日本語</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp<a
-            href="javascript:void(0)" onclick="changeLanguage('en')" title="English">English</a>&nbsp&nbsp&nbspl</p>
+    <p class="language">
+        <br>l&nbsp&nbsp&nbsp
+        <a href="javascript:void(0)" onclick="changeLanguage('cn')" title="中文">中文</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp
+        <a href="javascript:void(0)" onclick="changeLanguage('jp')" title="日本語">日本語</a>&nbsp&nbsp&nbspll&nbsp&nbsp&nbsp
+        <a href="javascript:void(0)" onclick="changeLanguage('en')" title="English">English</a>&nbsp&nbsp&nbspl
+    </p>
 
     <section class="part flexbox">
         <div class="left">
             <div data-aos="fade-right" data-aos-duration="1500">
                 <h1>About Me ¹</h1>
-                <p class="chinese" style="display: block;">台嘎好，這裡是牙膏，有微社恐的宅宅
-                    <br>中文 OK || 英文 OK || 日語 N87
+                <p class="chinese" style="display: block;">你好，這裡是牙膏，有微社恐的宅宅
+                    <br>中文 OK || 英文 OK || 日語一點點
                     <br>很普通的普通人，興趣很廣但都不深
                     <br>交友就看投不投緣，合者聚不合者散
                     <br>想聊天認識右邊有 FB 和 TG 可以直接加
                     <br>但先打個預防針，本人講話比較直接
                     <br>歡迎繼續往下瀏覽了解更多的我
-                    <br>或是右上有個酷叉叉可以直接點下去
+                    <br>或是右上有個叉叉可以直接點下去
                 </p>
                 <p class="japanese" style="display: none;">ブラッドと申します。軽度コミュ障のおたく。
                     <br>中国語 OK | 英語 OK | 日本語ちょっとだけ
@@ -73,8 +70,8 @@
                     <br>私についてもっと知るために読んでください。
                     <br>または、右上の「X」をクリックしてください。
                 </p>
-                <p class="english" style="display: none;">Hi, here is Brad. A homebody has little <span
-                        title="Social Anxiety Disorder">SAD</span>.
+                <p class="english" style="display: none;">Hi, here is Brad. A homebody has little 
+                    <span title="Social Anxiety Disorder">SAD</span>.
                     <br>Chinese OK | English OK | Japanese pretty limited
                     <br>Just a normal man, interest is wide but not deep.
                     <br>Friendship? Let it be. You can’t force it.
@@ -82,10 +79,11 @@
                     <br>You can add it directly. But let me speak frankly,
                     <br>I'm a straightforward guy. I didn’t mean it.
                     <br>Continue to scroll down if you want to know more.
-                    <br>Or there's a cool "X" at the upper right corner can click it.
+                    <br>Or there's a "X" at the upper right corner can click it.
                 </p>
             </div>
         </div>
+
         <div class="right">
             <div data-aos="fade-left" data-aos-duration="1500">
                 <img class="profile" src="./Image/Icon/Profile.jpg" alt="Profile.jpg" loading="lazy">
@@ -133,14 +131,15 @@
                 </div>
             </div>
         </div>
+        
         <div class="right">
             <div data-aos="fade-down" data-aos-duration="1500">
                 <h1>Spare Time ²</h1>
                 <p class="chinese" style="display: block;">平時運動喜歡打羽球、健身和游泳
-                    <br>只要不運動就會渾身不對勁的怪人
+                    <br>只要不運動就會渾身不對勁的人
                     <br>有學過一點鋼琴，但只會在心情差的時候彈
                     <br>
-                    <br>有玩遊戲、看動畫，但沒看任何 V
+                    <br>會玩遊戲、看動畫，不過沒看任何 Vtuber
                 </p>
                 <p class="japanese" style="display: none;">バドミントン、筋トレ、水泳が好き。
                     <br>運動しないと変な感じがする人。
@@ -164,19 +163,20 @@
             <div data-aos="fade-down-right" data-aos-duration="1500">
                 <h1>Games ³</h1>
                 <p class="chinese" style="display: block;">遊戲的部分，其實坑滿多的，比較常玩
-                    <br>Apex、R6、WarThunder 和 Minecraft
-                    <br>手遊有玩碧藍航線、原神和星穹鐵道
+                    <br>R6、WarThunder 和 Minecraft
+                    <br>手遊有玩碧藍航線、蔚藍檔案和星穹鐵道
                 </p>
                 <p class="japanese" style="display: none;">ゲームの部分で、最近よくプレイしているゲームは
-                    <br>Apex、R6、WarThunder と Minecraft。
-                    <br>ソシャゲ：アズールレーン、原神、スターレイル。
+                    <br>R6、WarThunder と Minecraft。
+                    <br>ソシャゲ：アズールレーン、ブルアカ、スターレイル。
                 </p>
                 <p class="english" style="display: none;">Talk to games. I play lots of games, like
                     <br>Apex、R6、WarThunder and Minecraft.
-                    <br>Moblie game Azur Lane, Genshin Impact and Star Rails.
+                    <br>Moblie game Azur Lane, Blue Archive and Star Rails.
                 </p>
             </div>
         </div>
+
         <div class="right">
             <div data-aos="fade-up-left" data-aos-duration="1500">
                 <img class="clip-trapezoid-ds" src="./Image/Body/Games.jpg" alt="Games.jpg" loading="lazy">
@@ -190,6 +190,7 @@
                 <img class="clip-trapezoid-us" src="./Image/Body/Anime.jpg" alt="Anime.jpg" loading="lazy">
             </div>
         </div>
+
         <div class="right">
             <div data-aos="fade-down-right" data-aos-duration="1500">
                 <h1>Anime ⁴</h1>
@@ -197,23 +198,23 @@
                     <br>特別是療育番跟搞笑番一定會看
                     <br>社畜需要多點治癒正能量緩解職場上的殘酷
                     <br>
-                    <br>聲優主推工藤晴香
-                    <br>歌手主推 milet
+                    <br>聲優主推工藤晴香和夏吉優子
+                    <br>歌手主推 milet 和 ReoNa
                 </p>
                 <p class="japanese" style="display: none;">基本的に、話題性のあるアニメはよく見る。
                     <br>特に感動的なと面白いアニメは必ず見ます。
                     <br>職場の残酷さを和らげるために、
                     <br>ポジティブなエネルギーが必要だからです。
                     <br>
-                    <br>好きな声優、工藤晴香。
-                    <br>好きな歌手、milet。
+                    <br>好きな声優、工藤晴香と夏吉ゆうこ。
+                    <br>好きな歌手、milet と ReoNa。
                 </p>
                 <p class="english" style="display: none;">Basically, I watch every anime has a good discussion.
                     <br>Especially touching or funny anime. I'll' definitely watch it.
                     <br>Cause I need some positive energy to ease the cruelty of workplace.
                     <br>
-                    <br>Favorite voice actress, Kudou Haruka.
-                    <br>Favorite singer, milet.
+                    <br>Favorite voice actress, Kudou Haruka and Natsuyoshi Yuuko.
+                    <br>Favorite singer, milet and ReoNa.
                 </p>
             </div>
         </div>
@@ -223,34 +224,35 @@
         <div class="left">
             <div data-aos="fade-up" data-aos-duration="1500">
                 <h1>Others ⁵</h1>
-                <p class="chinese" style="display: block;">資管系畢業，現在是個社畜軟體工程師
+                <p class="chinese" style="display: block;">資管系畢業，現在是個社畜軟體開發工程師
                     <br>喜歡研究電腦硬體，也喜歡研究資訊界的新知
                     <br>不過啊都沒有到很精通就是了，畢竟嘛
                     <br>資管系的特點就是什麼都學什麼都不精通
                     <br>
-                    <br>偶爾下廚料理填飽自己，也有在玩攝影
-                    <br>但只是用手機隨手拍的，連業餘都稱不上
+                    <br>近幾年買了一台單眼相機
+                    <br>但只是在場次隨手拍的，連業餘都稱不上
                 </p>
                 <p class="japanese" style="display: none;">情報管理学科卒業、現在はソフト開発者です。
                     <br>PC の新しい科学技術情報を勉強するのが好き。
                     <br>でも、あまり上手ではない。結局、情報管理学科
                     <br>の特徴は何でも学ぶが、何も得意ではない。
                     <br>
-                    <br>料理が好きで、写真も好きです。
-                    <br>アマチュアでもないのに、
-                    <br>スマホで写真を撮っているだけ。
+                    <br>ここ数年でカメラを購入したが、
+                    <br>イベントで気軽に撮るだけだ、
+                    <br>アマチュアと呼ぶのもおこがましい。
                 </p>
                 <p class="english" style="display: none;">Graduated from the Department of Information Management.
-                    <br>Now working as a software engineer.
+                    <br>Now working as a software develop engineer.
                     <br>Like study hardware and new sci. & tech. info. about computer.
                     <br>But not very proficient is it, After all...The characteristic
                     <br>of IM is they learn everything and unproficient in everything.
                     <br>
-                    <br>Sometimes cooking, and also like photography.
-                    <br>But just a cellphone camera lover, not even an amateur.
+                    <br>In recent years I bought an camera.
+                    <br>But just shoot during the event, not even an amateur.
                 </p>
             </div>
         </div>
+
         <div class="right">
             <div data-aos="fade-up" data-aos-duration="1500">
                 <div class="swiper mySwiper">
@@ -282,16 +284,15 @@
         </p>
     </div>
 
-    <div id="back-to-top" onclick="scrollToTop()" title="回到頂部">
+    <div id="backToTop" onclick="scrollToTop()" title="回到頂部">
         <span>↑</span>
     </div>
 
-    <div id="dark-mode-fab" onclick="toggleDarkMode()" title="切換深淺模式">
-        <span id="mode-icon">🌓</span>
+    <div id="darkMode" onclick="toggleDarkMode()" title="切換深淺模式">
+        <span id="modeIcon">🌓</span>
     </div>
 
-    <input type="hidden" id="progress_width" value="0">
-
+    <input type="hidden" id="progressWidth" value="0">
 </body>
 
 </html>
