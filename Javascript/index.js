@@ -1,5 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js';
 import { getDatabase, ref, push, serverTimestamp, query, limitToLast, orderByKey, endBefore, get } from 'https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js';
+import { initializeAppCheck, ReCaptchaV3Provider } from 'https://www.gstatic.com/firebasejs/12.7.0/firebase-app-check.js';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBodxxzeqHRBHrlxZKhQZjpc_LPiLEP--I",
@@ -11,7 +12,14 @@ const firebaseConfig = {
     appId: "1:933632391116:web:c83a759eb82ab7c7adcf69",
     measurementId: "G-PLC6TDSDS1"
 };
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+    self.FIREBASE_APPCHECK_DEBUG_TOKEN = true; 
+}
 const app = initializeApp(firebaseConfig);
+const appCheck = initializeAppCheck(app, {
+    provider: new ReCaptchaV3Provider('6Lf3SUcsAAAAAOr0fU_zCazezhWEgR1EVIZdzQdW'),
+    isTokenAutoRefreshEnabled: true
+});
 const db = getDatabase(app);
 const commentsRef = ref(db, 'comments');
 const pageSize = 5;
