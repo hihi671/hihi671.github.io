@@ -3,7 +3,7 @@ import { getDatabase, ref, push, serverTimestamp, query, limitToLast, orderByKey
 import { initializeAppCheck, ReCaptchaV3Provider } from 'https://www.gstatic.com/firebasejs/12.7.0/firebase-app-check.js';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBodxxzeqHRBHrlxZKhQZjpc_LPiLEP--I",
+    apiKey: "AIzaSyBmoCUHUthg3Nvog706AqJJHB6L9SfBOik",
     authDomain: "myweb-1f8c8.firebaseapp.com",
     databaseURL: "https://myweb-1f8c8-default-rtdb.firebaseio.com",
     projectId: "myweb-1f8c8",
